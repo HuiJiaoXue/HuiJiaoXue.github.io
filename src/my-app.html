@@ -193,7 +193,7 @@ for(n in this._instanceProps)e._addPropertyEffect(n,"function",this._createInsta
 <script>Polymer.IronButtonStateImpl={properties:{pressed:{type:Boolean,readOnly:!0,value:!1,reflectToAttribute:!0,observer:"_pressedChanged"},toggles:{type:Boolean,value:!1,reflectToAttribute:!0},active:{type:Boolean,value:!1,notify:!0,reflectToAttribute:!0},pointerDown:{type:Boolean,readOnly:!0,value:!1},receivedFocusFromKeyboard:{type:Boolean,readOnly:!0},ariaActiveAttribute:{type:String,value:"aria-pressed",observer:"_ariaActiveAttributeChanged"}},listeners:{down:"_downHandler",up:"_upHandler",tap:"_tapHandler"},observers:["_detectKeyboardFocus(focused)","_activeChanged(active, ariaActiveAttribute)"],keyBindings:{"enter:keydown":"_asyncClick","space:keydown":"_spaceKeyDownHandler","space:keyup":"_spaceKeyUpHandler"},_mouseEventRe:/^mouse/,_tapHandler:function(){this.toggles?this._userActivate(!this.active):this.active=!1},_detectKeyboardFocus:function(e){this._setReceivedFocusFromKeyboard(!this.pointerDown&&e)},_userActivate:function(e){this.active!==e&&(this.active=e,this.fire("change"))},_downHandler:function(e){this._setPointerDown(!0),this._setPressed(!0),this._setReceivedFocusFromKeyboard(!1)},_upHandler:function(){this._setPointerDown(!1),this._setPressed(!1)},_spaceKeyDownHandler:function(e){var t=e.detail.keyboardEvent,i=Polymer.dom(t).localTarget;this.isLightDescendant(i)||(t.preventDefault(),t.stopImmediatePropagation(),this._setPressed(!0))},_spaceKeyUpHandler:function(e){var t=e.detail.keyboardEvent,i=Polymer.dom(t).localTarget;this.isLightDescendant(i)||(this.pressed&&this._asyncClick(),this._setPressed(!1))},_asyncClick:function(){this.async(function(){this.click()},1)},_pressedChanged:function(e){this._changedButtonState()},_ariaActiveAttributeChanged:function(e,t){t&&t!=e&&this.hasAttribute(t)&&this.removeAttribute(t)},_activeChanged:function(e,t){this.toggles?this.setAttribute(this.ariaActiveAttribute,e?"true":"false"):this.removeAttribute(this.ariaActiveAttribute),this._changedButtonState()},_controlStateChanged:function(){this.disabled?this._setPressed(!1):this._changedButtonState()},_changedButtonState:function(){this._buttonStateChanged&&this._buttonStateChanged()}},Polymer.IronButtonState=[Polymer.IronA11yKeysBehavior,Polymer.IronButtonStateImpl];</script>
 <dom-module id="paper-ripple" assetpath="../bower_components/paper-ripple/">
 
-  
+
 
   <template>
     <style>:host{display:block;position:absolute;border-radius:inherit;overflow:hidden;top:0;left:0;right:0;bottom:0;pointer-events:none;}:host([animating]){-webkit-transform:translate(0, 0);transform:translate3d(0, 0, 0);}#background,
@@ -257,9 +257,9 @@ for(n in this._instanceProps)e._addPropertyEffect(n,"function",this._createInsta
 
     <app-drawer-layout fullbleed="">
 
-      
+
       <app-drawer>
-        <app-toolbar>菜单</app-toolbar>
+        <app-toolbar>普会</app-toolbar>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a name="weixue" href="/weixue">为学</a>
           <a name="daxue" href="/daxue">大学</a>
@@ -271,7 +271,7 @@ for(n in this._instanceProps)e._addPropertyEffect(n,"function",this._createInsta
         </iron-selector>
       </app-drawer>
 
-      
+
       <app-header-layout has-scrolling-region="">
 
         <app-header condenses="" reveals="" effects="waterfall">
