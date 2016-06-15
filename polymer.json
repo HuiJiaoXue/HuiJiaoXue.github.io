@@ -1,0 +1,13 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/my-app.html",
+  "fragments": [
+    "src/my-daxue.html",
+    "src/my-laozi.html",
+    "src/my-steve-jobs.html",
+    "src/my-sushu.html",
+    "src/my-weixue.html",
+    "src/my-zhongyong.html",
+    "src/my-zhuangzi.html"
+  ]
+}
